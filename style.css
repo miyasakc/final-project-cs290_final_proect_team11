@@ -383,11 +383,7 @@
 			margin-bottom: 0;
 		}
 
-		.box.alt {
-			border: 0;
-			border-radius: 0;
-			padding: 0;
-		}
+	
 
 		@media screen and (max-width: 736px) {
 
@@ -466,6 +462,7 @@
 
 form {
 		margin: 0 0 2rem 0;
+		text-align: center;
 	}
 
 		form .field {
@@ -473,6 +470,11 @@ form {
 		}
 
 			form .field.half {
+				display: inline-block;
+				margin-right: 0%;
+				width: 50%;
+			}
+			form .field.third{
 				display: inline-block;
 				margin-right: 2.5%;
 				width: 30%;
@@ -664,9 +666,9 @@ form {
 
 			#header > .Title span {
 				font-weight: 300;
-				font-size: 1rem;
+				font-size: 2rem;
 				display: block;
-				color: rgba(255, 255, 255, 0.65);
+				color: #a6a6a6;
 			}
 
 	@media screen and (max-width: 1280px) {
@@ -801,7 +803,7 @@ form {
 
 	.wrapper.style2 {
 		background: #1e1f23;
-		padding: 6rem;
+		padding: 0rem;
 	}
 
 		.wrapper.style2 header {
@@ -824,7 +826,7 @@ form {
 		@media screen and (max-width: 1280px) {
 
 			.wrapper.style2 {
-				padding: 4rem;
+				padding: 0rem;
 			}
 
 		}
@@ -832,7 +834,7 @@ form {
 		@media screen and (max-width: 736px) {
 
 			.wrapper.style2 {
-				padding: 2rem;
+				padding: 0rem;
 			}
 
 		}
