@@ -1,0 +1,24 @@
+{
+  "name": "final-project-cs290_final_proect_team11",
+  "version": "1.0.0",
+  "description": "This is team 11 for CS290 final project See the collaboration page on team 11 canvas to see the general information",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miyasakc/final-project-cs290_final_proect_team11.git"
+  },
+  "author": "CS290 Team 11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miyasakc/final-project-cs290_final_proect_team11/issues"
+  },
+  "homepage": "https://github.com/miyasakc/final-project-cs290_final_proect_team11#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
