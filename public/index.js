@@ -1,3 +1,47 @@
+var myData = localData();
+
+function addPoint(locx, locy){
+    myData[0].values.push({x:locx,y:locy});
+    chartData.datum(myData).call(chart);
+    nv.utils.windowResize(chart.update);
+}
+
+var chart;
+var chartData;
+nv.addGraph(function() {
+    chart = nv.models.scatterChart()
+                  .showDistX(false)    //showDist, when true, will display those little distribution lines on the axis.
+                  .showDistY(false)
+
+    //Axis settings
+    chart.xScale(d3.scale.log());
+    chart.xAxis.tickFormat(d3.format('1'));
+    chart.yAxis.tickFormat(d3.format('.02f'));
+    chart.forceY([0,5]);
+  
+    
+    chartData = d3.select('#svgcontainer svg').datum(myData);
+    chartData.call(chart);
+  
+    nv.utils.windowResize(chart.update);
+  
+    return chart;
+  });
+  
+
+function localData() { 
+    var data = []
+    data.push({
+        key: "Local deviation",
+        values: []
+    });
+    data.push({
+        key: "Global deviation",
+        values: []
+    });
+    return data;
+}
+
 function simulate(trials){ 
     var inside = 0; //holds the number of points stored inside the circle
     // console.log("Running Monte Carlo simulation with n =", trials);
@@ -24,6 +68,7 @@ function runSimulation(event){
             document.getElementById("Result 1").value = res1;
             document.getElementById("Result 2").value = res2;
             document.getElementById("Result 3").value = res3;
+            addPoint(res1, res3);
             event.stopPropagation();
         } else if(numpoints > 90000000){
             alert("The maximum number of points is 90,000,000!");
