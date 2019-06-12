@@ -107,17 +107,16 @@ function getMongoData(){
   getRequest.setRequestHeader('Content-Type', 'application/json');
   getRequest.send();
   getRequest.addEventListener('load', function(event){
-    if (event.target.status === 200) {
+    if (event.target.status === 200 && event.target.readyState === 4) {
       console.log("== Data Acquired");
-      console.log(getRequest.responseJSON);
-      for(var i in getRequest.responseJSON){
+      data = JSON.parse(getRequest.response);
+      for(var i in data.data){
         try{
-          for(var j in i.values){
-            myData[1].values.push(i.values[j]);
-          }
+          console.log(data.data[i].values[0])
+          myData[1].values.push(data.data[i].values[0]);
         }
         catch{
-          console.log("Could not process data", i);
+          console.log("== Could not process data", i);
         }
     }
   }

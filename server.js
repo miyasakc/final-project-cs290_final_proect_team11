@@ -47,9 +47,9 @@ mongoClient.connect(mongoURL, {useNewUrlParser: true}, function (err, client) {
 			for(var i in data){
 				coll_array.push(data[i]);
 			}
-			res.body = coll_array;
+			res.body = {data: coll_array};
 			res.readyState = 4;
-			res.status(200).send();
+			res.status(200).send(res.body);
 		});
 	});
 });
