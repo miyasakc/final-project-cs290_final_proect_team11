@@ -18,18 +18,18 @@ nv.addGraph(function() {
     chart.xAxis.tickFormat(d3.format('1'));
     chart.yAxis.tickFormat(d3.format('.02f'));
     chart.forceY([0,5]);
-  
-    
+
+
     chartData = d3.select('#svgcontainer svg').datum(myData);
     chartData.call(chart);
-  
+
     nv.utils.windowResize(chart.update);
-  
+
     return chart;
   });
-  
 
-function localData() { 
+
+function localData() {
     var data = []
     data.push({
         key: "Local deviation",
@@ -42,7 +42,7 @@ function localData() {
     return data;
 }
 
-function simulate(trials){ 
+function simulate(trials){
     var inside = 0; //holds the number of points stored inside the circle
     // console.log("Running Monte Carlo simulation with n =", trials);
     for(var i = 0;i<trials;i++){ //Loop a number of times equal to the number of requested trials

@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/miyasakc/final-project-cs290_final_proect_team11#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "d3": "^5.9.2",
+    "express": "^4.17.1",
+    "nvd3": "^1.8.6"
   }
 }

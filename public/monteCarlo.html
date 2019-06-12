@@ -4,6 +4,8 @@
 	<head>
 		<title>Monte Carlo Simulation</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="http://nvd3.org/assets/lib/d3.v3.js"></script>
+		<script src="http://nvd3.org/assets/js/nv.d3.js"></script>
 		<script src="/index.js" charset="utf-8" defer></script>
 	</head>
 	<body>
@@ -26,14 +28,14 @@
 							<h2>What is Monte Carlo's Simulation?</h2>
 						</header>
 						<div class="content">
-							<p>Monte Carlo Simulation is the Aenean quis egestas diam, non laoreet elit. Ut lobortis auctor eros, sit amet vulputate urna convallis non. Integer nisi urna, tempor id ornare a, feugiat sed ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam lobortis nisi vitae viverra. Quisque efficitur, nulla nec pretium congue, magna tortor cursus velit, at iaculis justo dolor et diam. Suspendisse vel est odio. Phasellus vitae est egestas, pharetra nisl et, maximus libero. Nunc nulla lorem, vehicula a pellentesque sit amet, pretium non risus. Quisque fringilla non neque sit amet convallis. Quisque sem lorem, tincidunt eu blandit et, laoreet a felis. Fusce at lorem scelerisque, fringilla justo eu, condimentum odio. Quisque ac est eu ex cursus consequat in vitae dolor. Phasellus eu facilisis felis. Morbi massa nibh, rhoncus quis interdum ac, feugiat non mi. 
+							<p>Monte Carlo Simulation is the Aenean quis egestas diam, non laoreet elit. Ut lobortis auctor eros, sit amet vulputate urna convallis non. Integer nisi urna, tempor id ornare a, feugiat sed ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam lobortis nisi vitae viverra. Quisque efficitur, nulla nec pretium congue, magna tortor cursus velit, at iaculis justo dolor et diam. Suspendisse vel est odio. Phasellus vitae est egestas, pharetra nisl et, maximus libero. Nunc nulla lorem, vehicula a pellentesque sit amet, pretium non risus. Quisque fringilla non neque sit amet convallis. Quisque sem lorem, tincidunt eu blandit et, laoreet a felis. Fusce at lorem scelerisque, fringilla justo eu, condimentum odio. Quisque ac est eu ex cursus consequat in vitae dolor. Phasellus eu facilisis felis. Morbi massa nibh, rhoncus quis interdum ac, feugiat non mi.
 Donec at egestas ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus velit nec elit pulvinar, et faucibus diam lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a augue eu enim porttitor mollis. Quisque purus arcu, sodales vitae nibh sit amet, molestie scelerisque leo. Sed fermentum eros orci, eu elementum nulla placerat non. Maecenas convallis tincidunt sapien, vel gravida tellus elementum a. Proin sed lacus sed eros suscipit venenatis. Sed a imperdiet velit, ut eleifend justo. In a lacus ac eros pulvinar mattis. Integer vel bibendum ante, id euismod massa. Donec a viverra libero. Nullam eget pellentesque elit, a sagittis nibh. Suspendisse id nisi leo. </p>
 						</div>
-						
+
 					</section>
 
 				<!-- Two -->
-					
+
 					<section id="Two" class="wrapper style2">
 						<div class="box">
 							<div class="content">
@@ -55,23 +57,23 @@ Donec at egestas ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 									<ul class="actions align-center">
 										<a href="#" class ="btn">Try it</a>
 									</ul>
-									
+
 								</form>
-							
+
 						</div>
-						
-						
+
+
 					</section>
-					
+
 					<!-- Three -->
-					
+
 					<section id="Two" class="wrapper style2">
 						<div class="box">
 							<div class="content">
 								<h2 class="align-center">Result</h2>
-								<hr />
-							<div class="content"><!-- Check field usage -->
-							<p>Put Graph</p>
+								<hr/>
+							<div class="content" id="svgcontainer"><!-- Check field usage -->
+								<svg></svg>
 							</div>
 								<form action="#" method="post">
 									<div class="field half">
@@ -86,21 +88,38 @@ Donec at egestas ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 										<label for="Result 3">Deviation of simulated and "True" value: </label>
 										<input name="Result 3" id="Result 3" type="text" placeholder="Deviation from accepted value of Pi">
 									</div>
-									
+
 								</form>
 							</div>
 						</div>
-						
-						
 					</section>
-					
-					
-				
+
+					<section id="Four" class="wrapper style2">
+						<div class="box">
+							<div class="content">
+								<h2 class="align-center">Site Statistics</h2>
+								<hr/>
+								<form action="#" method="post">
+									<div class="field half">
+										<label for="Mongo1">Total simulations run:</label>
+										<input name="Mongo1" id="Mongo1" type="text" placeholder="Simulations run">
+									</div>
+									<div class="field half">
+										<label for="Mongo2">Total number of points generated: </label>
+										<input name="Mongo2" id="Mongo2" type="text" placeholder="Points generated">
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+
+
+
 
 
 				</div>
 			</section>
-	
+
 
 	</body>
 </html>
