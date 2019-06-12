@@ -10,14 +10,15 @@ var chart;
 var chartData;
 nv.addGraph(function() {
     chart = nv.models.scatterChart()
-                  .showDistX(false)    //showDist, when true, will display those little distribution lines on the axis.
-                  .showDistY(false)
+                  .showDistX(true)
+                  .showDistY(true)
 
     //Axis settings
-    chart.xScale(d3.scale.log());
+    // chart.xScale(d3.scale.log()); 
     chart.xAxis.tickFormat(d3.format('1'));
     chart.yAxis.tickFormat(d3.format('.02f'));
     chart.forceY([0,5]);
+    chart.forceX([0,5]);
 
 
     chartData = d3.select('#svgcontainer svg').datum(myData);

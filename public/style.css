@@ -24,7 +24,9 @@
 		list-style: none;
 	}
 
-
+svg {
+	width: 100%;
+}
 
 /* Containers */
 
